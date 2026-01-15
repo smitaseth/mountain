@@ -1,5 +1,5 @@
 export default function Page() {
-  async function submitForm(formData) {
+  async function submitForm(formData: FormData) {
     "use server";
     const formFields = {
       email: formData.get("email"),
