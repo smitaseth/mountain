@@ -1,16 +1,22 @@
 "use client";
-import Image from "next/image";
+import Image, { type ImageLoaderProps } from "next/image";
 
-export default function HotelBlock({ id, name, capacity }) {
-  const imageLoader = ({ src }) => {
-    return `hotels/${src}.jpeg`;
+interface HotelBlockProps {
+  id: number;
+  name: string;
+  capacity: number;
+}
+
+export default function HotelBlock({ id, name, capacity }: HotelBlockProps) {
+  const imageLoader = ({ src }: ImageLoaderProps) => {
+    return `${src}.jpeg`;
   };
   return (
     <div>
       <h2>{name}</h2>
       <p>{capacity}</p>
       <Image
-        src={id}
+        src={`hotels/${id}`}
         height={300}
         width={300}
         loader={imageLoader}

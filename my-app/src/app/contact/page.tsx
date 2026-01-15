@@ -39,7 +39,7 @@ export default function Page() {
             id="message"
             required
             name="message"
-            rows="4"
+            rows={4}
           ></textarea>
         </div>
         <button className="text-white bg-blue-600 rounded-md p-3" type="submit">
