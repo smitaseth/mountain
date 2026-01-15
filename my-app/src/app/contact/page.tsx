@@ -1,5 +1,5 @@
 export default function Page() {
-  async function submitForm(formData: FormData) {
+  async function submitForm(formData: FormData): Promise<void> {
     "use server";
     const formFields = {
       email: formData.get("email"),
@@ -7,7 +7,6 @@ export default function Page() {
     };
     console.log("formFields", formFields);
     console.log("TODO: send these forms valuses to a backend");
-    return formFields;
   }
   return (
     <main className="max-w-md mx-auto p-6 bg-white shadow-md rounded-md">
