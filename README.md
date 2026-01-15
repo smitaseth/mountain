@@ -1,2 +1,2 @@
-# alexKitchen
-App to show react components, hooks and state management
+# Mountain
+Next JS, App router, server side rendring, server components, client components
